@@ -1,0 +1,19 @@
+<h1>{{ tacos?.name }}</h1>
+
+<p>Ingrédients : </p>
+
+<div>
+  <p>Ingrédient disponibles : </p>
+  <div *ngFor="let t of avaibleToppings">
+    <span>{{ t.name }}</span>
+    <button class="btn " (click)="addTopping(t)">ajouter </button>
+  </div>
+</div>
+
+
+<div>
+  <p>Ingrédient présent : </p>
+  <div *ngFor="let t of toppings">
+    <span>{{ t.topping.name }}</span>
+  </div>
+</div>

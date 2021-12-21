@@ -1,6 +1,9 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { ClarityModule } from '@clr/angular';
 
 import { AppComponent } from './app.component';
 
@@ -14,9 +17,12 @@ const routes : Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    ClarityModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

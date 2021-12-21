@@ -1,0 +1,12 @@
+<form class="clr-form clr-form-horizontal">
+  <div class="clr-form-control">
+    <label for="example4" class="clr-control-label">Label</label>
+    <div class="clr-control-container">
+      <div class="clr-input-wrapper">
+        <input type="text" id="example4" placeholder="Nom du tacos" class="clr-input" name="name" [(ngModel)]="tacos.name" />
+      </div>
+    </div>
+  </div>
+</form>
+
+<button class="btn btn-primary" (click)="save()">{{ tacos.id ? 'Modifier' : 'Ajouter' }}</button>

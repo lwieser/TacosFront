@@ -1,7 +1,25 @@
-<h1> My Tacos </h1>
-<ul>
-  <li><a [routerLink]="['tacos']">Menu (Tacos)</a></li>
-  <li><a [routerLink]="['toppings']">Ingrédients</a></li>
-</ul>
+<div class="main-container">
 
-<router-outlet></router-outlet>
+  <header class="header header-6">
+    <div class="branding">
+      <a href="javascript:void(0)">
+        <span class="title">My Tacos</span>
+      </a>
+    </div>
+  </header>
+  <nav class="subnav">
+    <ul class="nav">
+      <li class="nav-item">
+        <a [routerLink]="['tacos']">Menu (Tacos)</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['toppings']">Ingrédients</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="content-container">
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

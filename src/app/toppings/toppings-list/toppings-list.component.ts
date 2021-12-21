@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToppingService } from 'src/app/core/topping.service';
 
 @Component({
   selector: 'app-toppings-list',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToppingsListComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: ToppingService) { }
 
   ngOnInit(): void {
   }
